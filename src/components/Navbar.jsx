@@ -13,7 +13,11 @@ const Navbar = () => {
     console.log('Searching for:', searchTerm);
   };
 
-  
+  return (
+    <div>
+        
+    </div>
+  );
 };
 
 export default Navbar;

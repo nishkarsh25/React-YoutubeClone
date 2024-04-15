@@ -8,6 +8,11 @@ import { RiVideoAddLine } from 'react-icons/ri';
 const Navbar = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
+  const handleSearch = () => {
+    // Your search functionality here
+    console.log('Searching for:', searchTerm);
+  };
+
   
 };
 

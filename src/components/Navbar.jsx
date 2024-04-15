@@ -14,7 +14,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex justify-between items-center px-6 h-16 bg-gray-900 text-white shadow-lg fixed w-full z-50">
+    <div className="flex justify-between items-center px-6 h-16 bg-gray-900 text-white shadow-lg  w-full z-50">
       <div className="flex items-center space-x-4">
         <GiHamburgerMenu className="text-3xl cursor-pointer" />
         <BsYoutube className="text-4xl text-red-500" />

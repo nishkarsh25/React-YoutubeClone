@@ -5,4 +5,8 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import { BsYoutube, BsBell, BsPersonCircle } from 'react-icons/bs';
 import { RiVideoAddLine } from 'react-icons/ri';
 
+const Navbar = () => {
+  
+};
 
+export default Navbar;

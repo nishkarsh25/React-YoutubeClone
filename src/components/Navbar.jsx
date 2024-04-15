@@ -5,7 +5,7 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import { BsYoutube, BsBell, BsPersonCircle } from 'react-icons/bs';
 import { RiVideoAddLine } from 'react-icons/ri';
 
-const Navbar = () => {
+const Navbar = ({ onMenuClick }) => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const handleSearch = () => {
@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <div className="flex justify-between items-center px-6 h-16 bg-gray-900 text-white shadow-lg  w-full z-50">
       <div className="flex items-center space-x-4">
-        <GiHamburgerMenu className="text-3xl cursor-pointer" />
+        <GiHamburgerMenu className="text-3xl cursor-pointer" onClick={onMenuClick} /> {/* Call onMenuClick when the icon is clicked */}
         <BsYoutube className="text-4xl text-red-500" />
         <span className="text-xl font-bold">YouTube</span>
       </div>

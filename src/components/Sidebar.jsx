@@ -45,7 +45,37 @@ const Sidebar = () => {
   ];
 
   return (
-    
+    <div className="w-64 bg-[#212121] py-4 px-6 flex flex-col h-screen">
+      <ul className="flex flex-col space-y-2">
+        {mainLinks.map(({ icon, name }) => (
+          <li
+            key={name}
+            className={`flex items-center p-3 rounded-lg ${
+              name === 'Home' ? 'bg-gray-800' : ''
+            } hover:bg-gray-800 transition duration-300 ease-in-out transform hover:scale-105`}
+          >
+            {icon}
+            <span className="text-white text-lg font-semibold ml-4">
+              {name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <hr className="border-gray-700 my-4" />
+      <ul className="flex flex-col space-y-2">
+        {otherLinks.map(({ icon, name }) => (
+          <li
+            key={name}
+            className="flex items-center p-3 rounded-lg hover:bg-gray-800 transition duration-300 ease-in-out transform hover:scale-105"
+          >
+            {icon}
+            <span className="text-white text-lg font-semibold ml-4">
+              {name}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
 

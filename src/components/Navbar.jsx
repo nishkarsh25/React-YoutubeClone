@@ -6,6 +6,8 @@ import { BsYoutube, BsBell, BsPersonCircle } from 'react-icons/bs';
 import { RiVideoAddLine } from 'react-icons/ri';
 
 const Navbar = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+
   
 };
 

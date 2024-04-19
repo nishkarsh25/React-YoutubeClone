@@ -1,8 +1,20 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Sidebar from '../components/Sidebar';
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { getHomePageVideos } from '../store/reducers/getHomePageVideos';
 
 const Home = () => {
+
+  const dispatch = useDispatch();
+  const videos = useSelector((state)=> state.youtubeApp.videos);
+
+  useEffect(()=>{
+    dispatch(getHomePageVideos(false));
+  },[dispatch])
+
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {

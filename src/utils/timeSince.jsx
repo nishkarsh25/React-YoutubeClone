@@ -31,5 +31,5 @@ export const timeSince = (date) => {
         return Math.floor(interval) + "minutes";
     }
 
-    return Math.floor(second) + "seconds";
+     return Math.floor(second) + "seconds";
 };

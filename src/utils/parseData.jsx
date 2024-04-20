@@ -71,7 +71,7 @@ export const parseData = async (items) => {
         });
       }
     });
-    
+    return parseData;
   }
   catch (err) {
     console.log(err);

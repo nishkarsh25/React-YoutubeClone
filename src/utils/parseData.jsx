@@ -16,6 +16,16 @@ export const parseData = async (items) => {
       videoIds.push(item.id.videoId);
     });
 
+    const {
+      data: { items: channelsData },
+    } = await axios.get(`https://youtube.googleapis.com/youtube/v3/channels?part=snippet,contentDetails&id=${channelIds.join(
+      ","
+    )}&key=${API_KEY}`);
+
+
+
+
+
     
   }
   catch (err) {

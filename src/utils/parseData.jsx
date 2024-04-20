@@ -26,6 +26,12 @@ export const parseData = async (items) => {
 
 
 
+    const parsedChannelsData = [];
+    channelsData.forEach((channel) => parsedChannelsData.push({
+      id: channel.id,
+      image: channel.snippet.thumbnails.default.url,
+    }));
+
     
   }
   catch (err) {

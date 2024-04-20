@@ -32,6 +32,18 @@ export const parseData = async (items) => {
       image: channel.snippet.thumbnails.default.url,
     }));
 
+    const {
+      data: { items: videosData },
+    } = await axios.get(
+      `https://youtube.googleapis.com/youtube/v3/videos?part=contentDetails,statistics&id=${videoIds.join(
+        ","
+      )}&key=${API_KEY}`
+    );
+
+    console.log(videosData)
+
+
+
     
   }
   catch (err) {

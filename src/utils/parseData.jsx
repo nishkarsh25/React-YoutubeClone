@@ -46,7 +46,30 @@ export const parseData = async (items) => {
 
     const parseData = [];
     items.forEach((item, index) => {
-      
+      const { image: channelImage
+      } = parsedChannelsData.find((data) => data.id === item.snippet.channelId);
+      if (channelImage) {
+        parseData.push({
+          videoId: item.id.videoId,
+          videoTitle: item.snippet.title,
+          videoDescription: item.snippet.description,
+          videoThumbnail: item.snippet.thumbnails.medium.url,
+          videoLink: `https://www.youtube.com/watch?v=${item.id.videoId}`,
+          videoDuration: parseVideoDuration(
+            videosData[index].contentDetails.duration
+          ),
+          videoViews: convertRawtoString(
+            videosData[index].statistics.viewCount
+          ),
+          videoAge: timeSince(new Date(item.snippet.publishedAt)
+          ),
+          channelInfo: {
+            id: item.snippet.channelId,
+            image: channelImage,
+            name: item.snippet.channelTitle
+          },
+        });
+      }
     });
     
   }

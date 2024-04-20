@@ -44,6 +44,10 @@ export const parseData = async (items) => {
 
 
 
+    const parseData = [];
+    items.forEach((item, index) => {
+      
+    });
     
   }
   catch (err) {

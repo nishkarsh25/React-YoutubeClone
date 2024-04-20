@@ -3,5 +3,15 @@ export const timeSince = (date) => {
 
     let interval = second/31536000;
 
+    if(interval >1){
+        return Math.floor(interval) + "years";
+    }
+
+    interval = second/2592000;
+
+    if(interval>1){
+        return Math.floor(interval) +"months";
+    }
+
     
 };

@@ -28,6 +28,6 @@ export const parseVideoDuration = (duration) => {
     }`;
     }
 
-    
+    return ""
 }
 

@@ -7,5 +7,10 @@ const API_KEY = import.meta.env.VITE_REACT_APP_YOUTUBE_DATA_API_KEY;
 
 export const parseData = async (items) => {
 
-  
+  try {
+    
+  }
+  catch (err) {
+    console.log(err);
+  }
 };

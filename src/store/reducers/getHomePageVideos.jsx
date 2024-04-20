@@ -6,7 +6,7 @@ import { updateNextPageToken } from "../../features/youtubeSlice";
 const API_KEY = import.meta.env.VITE_REACT_APP_YOUTUBE_DATA_API_KEY;
 
 export const getHomePageVideos = createAsyncThunk(
-    "youtube/App/searchPageVideos",
+    "youtube/App/homePageVideos",
     async(isNext,{getState, dispatch}) => { // Destructure dispatch from the parameters
         const {
             youtubeApp : {nextPageToken : nextPageTokenFromState,videos},

@@ -9,5 +9,10 @@ export const convertRawtoString = (labelValue,isSub=false)=>{
         return(num/1.0e6).toFixed(0) +"M"; //1500000 = 1M
         
     }
+    if(num >=1.0e3){
+        return(num/1.0e3).toFixed(isSub ? 2 : 0) +"K"; //1500 = 1.50 K
+
+    }
+
     
 }

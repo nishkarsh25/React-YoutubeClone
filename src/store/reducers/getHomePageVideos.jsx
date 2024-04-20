@@ -17,13 +17,13 @@ export const getHomePageVideos = createAsyncThunk(
         const items = response.data.items;
         const parsedData = await parseData(items);
 
-        // Extract nextPageToken from the response
+       
         const nextPageToken = response.data.nextPageToken;
 
-        // Dispatch the updateNextPageToken action to update nextPageToken in the state
+        
         dispatch(updateNextPageToken(nextPageToken));
 
-        // Return the parsedData and nextPageToken in the payload
+        
         return { parsedData: [...videos, ...parsedData], nextPageToken };
     }
 )

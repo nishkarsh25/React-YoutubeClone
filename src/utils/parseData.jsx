@@ -40,7 +40,7 @@ export const parseData = async (items) => {
       )}&key=${API_KEY}`
     );
 
-    console.log(videosData)
+    
 
 
 

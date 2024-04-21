@@ -153,22 +153,6 @@ Before running the project, ensure you have the following installed:
    - Interact with the community: Like, comment, and share videos to engage with the YouTube community.
    - Customize preferences: Use the sidebar or profile settings to customize your YouTube experience, such as language preferences, notifications, and privacy settings.
 
-5. **Interactivity and Engagement:**
-   - Like and Dislike: Express your opinion on videos by liking or disliking them.
-   - Commenting: Engage with other users by leaving comments on videos.
-   - Sharing: Share interesting videos with friends and followers on social media platforms or via direct links.
-
-6. **Accessibility and Personalization:**
-   - Accessibility features: The application strives to be accessible to users with disabilities by providing keyboard navigation support, screen reader compatibility, and high contrast options.
-   - Personalization: Customize your YouTube experience by subscribing to channels, creating playlists, and receiving recommendations based on your viewing history and preferences.
-
-7. **Community Interaction:**
-   - Connect with creators: Follow your favorite content creators to stay updated on their latest uploads and activities.
-   - Join discussions: Participate in live chats, community posts, and Q&A sessions hosted by creators.
-   - Collaborate and create: Collaborate with other users on creative projects, challenges, and collaborations.
-
-
-
 
 ## React + Vite
 

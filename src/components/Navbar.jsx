@@ -4,29 +4,37 @@ import { FaMicrophone } from 'react-icons/fa';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { BsYoutube, BsBell, BsPersonCircle } from 'react-icons/bs';
 import { RiVideoAddLine } from 'react-icons/ri';
+import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { changeSearchTerm, clearVideos } from '../features/youtubeSlice';
+import { getSearchPageVideos } from '../store/reducers/getSearchPageVideos';
 
 const Navbar = ({ onMenuClick }) => {
   const [searchTerm, setSearchTerm] = useState('');
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  const handleSearch = () => {
-    // Your search functionality here
-    console.log('Searching for:', searchTerm);
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (searchTerm.trim() !== '') {
+      dispatch(changeSearchTerm(searchTerm)); // Update search term in Redux store
+      dispatch(clearVideos()); // Clear existing videos
+      dispatch(getSearchPageVideos(false)); // Fetch search page videos
+      navigate('/search'); // Navigate to the search page
+      setSearchTerm(''); // Clear search term input
+    }
   };
 
   return (
     <div className="flex justify-between items-center px-6 h-16 bg-gray-900 text-white shadow-lg  w-full z-50">
       <div className="flex items-center space-x-4">
-        <GiHamburgerMenu className="text-3xl cursor-pointer" onClick={onMenuClick} /> {/* Call onMenuClick when the icon is clicked */}
-        <BsYoutube className="text-4xl text-red-500" />
-        <span className="text-xl font-bold">YouTube</span>
+        <GiHamburgerMenu className="text-3xl cursor-pointer" onClick={onMenuClick} />
+        <Link to="/" className="flex items-center space-x-1" >
+          <BsYoutube className="text-4xl text-red-500" />
+          <span className="text-xl font-bold cursor-pointer">YouTube</span>
+        </Link>
       </div>
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          handleSearch();
-        }}
-        className="flex items-center space-x-2"
-      >
+      <form onSubmit={handleSearch} className="flex items-center space-x-2">
         <input
           type="text"
           placeholder="Search"

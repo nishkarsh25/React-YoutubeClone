@@ -214,6 +214,8 @@ This project is made possible by the contributions and support of various indivi
 This project wouldn't be possible without the contributions of the following:
 
 - **React**: A JavaScript library for building user interfaces. Visit [React](https://reactjs.org/) for more information.
+
+- **React Icons**: React Icons provides a comprehensive library of icons for React applications. Visit [React Icons](https://react-icons.github.io/react-icons/) for more information.
   
 - **Tailwind CSS**: A utility-first CSS framework for creating custom designs rapidly. Visit [Tailwind CSS](https://tailwindcss.com/) for more information.
 

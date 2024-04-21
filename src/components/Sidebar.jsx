@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   MdHome,
   MdSubscriptions,
@@ -10,10 +11,13 @@ import { LuThumbsUp } from 'react-icons/lu';
 import { GiHamburgerMenu } from 'react-icons/gi';
 
 const Sidebar = () => {
+  const navigate = useNavigate(); // Get the navigate function from React Router
+
   const mainLinks = [
     {
       icon: <MdHome className="text-3xl text-gray-400" />,
       name: 'Home',
+      onClick: () => navigate('/'), // Navigate to the home page
     },
     {
       icon: <GiHamburgerMenu className="text-3xl text-gray-400" />,
@@ -47,12 +51,13 @@ const Sidebar = () => {
   return (
     <div className="w-64 bg-[#212121] py-4 px-6 flex flex-col h-screen">
       <ul className="flex flex-col space-y-2">
-        {mainLinks.map(({ icon, name }) => (
+        {mainLinks.map(({ icon, name, onClick }) => (
           <li
             key={name}
             className={`flex items-center p-3 rounded-lg ${
               name === 'Home' ? 'bg-gray-800' : ''
             } hover:bg-gray-800 transition duration-300 ease-in-out transform hover:scale-105`}
+            onClick={onClick} // Add onClick event handler
           >
             {icon}
             <span className="text-white text-lg font-semibold ml-4">

@@ -19,7 +19,7 @@ This project is a clone of YouTube, aiming to replicate some of its core feature
 
 ## Live Demo
 
-You can try out the live demo of the app [here](https://glittery-nougat-31ee8a.netlify.app/).
+You can try out the live demo of the app [here](https://react-youtubeclone.onrender.com).
 
 ## Folder Structure
 
